@@ -1,0 +1,15 @@
+# SwiftLint Rules: https://realm.github.io/SwiftLint/rule-directory.html
+
+opt_in_rules:
+    - trailing_newline
+    - closure_spacing
+    - operator_usage_whitespace
+    - switch_case_on_newline
+
+disabled_rules:
+    - line_length
+    - force_cast
+    - trailing_whitespace
+
+reporter: "xcode"
+

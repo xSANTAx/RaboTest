@@ -12,6 +12,7 @@ enum UserFlowEvent {
 }
 
 class UserFlowCoordinator {
+    
     let navigationController: UINavigationController
     let screenFactory: UserScreenFactoryProtocol
 
@@ -21,9 +22,9 @@ class UserFlowCoordinator {
     }
 
     func start(using window: UIWindow?) {
-        let parseService: ParseServiceProtocol = ParseService()
+        let parsingService: ParsingServiceProtocol = ParsingService()
         
-        let viewController = screenFactory.getMainPage(parseService: parseService) { [weak self] event in
+        let viewController = screenFactory.getMainPage(parsingService: parsingService) { [weak self] event in
             guard let self = self else { return }
             
             switch event {
@@ -39,9 +40,5 @@ class UserFlowCoordinator {
     private func openDetailContent(issueModel: IssueModel) {
         let viewController = screenFactory.getDetailPage(issueModel: issueModel)
         navigationController.pushViewController(viewController, animated: true)
-    }
-    
-    deinit {
-        print("\(self) deinit")
     }
 }

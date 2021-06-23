@@ -12,6 +12,7 @@ protocol DetailPageFactoryProtocol {
 }
 
 class DetailPageFactory: DetailPageFactoryProtocol {
+    
     func make(with issue: IssueModel) -> UIViewController {
         let presenter = DetailPagePresenter(issue: issue)
         let view = DetailPageView(presenter: presenter)

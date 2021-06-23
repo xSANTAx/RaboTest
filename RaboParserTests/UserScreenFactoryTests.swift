@@ -30,7 +30,7 @@ final class UserScreenFactoryMock: UserScreenFactoryProtocol {
     var getDetailContentWasCalled: Bool = false
     var completion: (UserFlowEvent) -> Void = { _ in }
     
-    func getMainPage(parseService: ParseServiceProtocol, completion: @escaping (UserFlowEvent) -> Void) -> UIViewController {
+    func getMainPage(parsingService: ParsingServiceProtocol, completion: @escaping (UserFlowEvent) -> Void) -> UIViewController {
         self.completion = completion
         getMainContentWasCalled = true
         

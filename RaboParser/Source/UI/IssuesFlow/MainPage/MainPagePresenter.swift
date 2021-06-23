@@ -17,14 +17,14 @@ protocol MainPagePresenterProtocol {
 }
 
 class MainPagePresenter: MainPagePresenterProtocol {
-    weak var view: MainPageViewProtocol?
-    let parseService: ParseServiceProtocol
-    let navigationCompletion: ((UserFlowEvent) -> Void)?
     
+    weak var view: MainPageViewProtocol?
+    let parsingService: ParsingServiceProtocol
+    let navigationCompletion: ((UserFlowEvent) -> Void)?
     var issues: [IssueModel] = []
     
-    init(parseService: ParseServiceProtocol, completion: ((UserFlowEvent) -> Void)?) {
-        self.parseService = parseService
+    init(parsingService: ParsingServiceProtocol, completion: ((UserFlowEvent) -> Void)?) {
+        self.parsingService = parsingService
         self.navigationCompletion = completion
     }
     
@@ -36,13 +36,13 @@ class MainPagePresenter: MainPagePresenterProtocol {
         let fileName = "issues"
         
         view?.update(.loadind)
-        parseService.parseCVSFile(with: fileName) { [weak self] result in
+        parsingService.parseCVSFile(with: fileName) { [weak self] result in
             guard let self = self else { return }
             
             switch result {
-            case .success(let issues):
-                self.issues = issues
-                self.view?.update(.showIssuesCount(issues.count))
+            case .success(let items):
+                self.issues = items
+                self.view?.update(.showIssuesCount(items.count))
                 
             case .failure(let err):
                 if err == .noFileFound {

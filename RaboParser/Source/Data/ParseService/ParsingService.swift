@@ -1,5 +1,5 @@
 //
-//  ParseService.swift
+//  ParsingService.swift
 //  RaboParser
 //
 //  Created by Andrei Ivanou2 on 6/18/21.
@@ -7,46 +7,38 @@
 
 import Foundation
 
-typealias ParsingCompletion = (_ result: ParseResult<[IssueModel]>) -> Void
-
-public enum ParseResult<T>: Equatable where T: Equatable {
-    case failure(ParsingError)
-    case success(T)
+protocol ParsingServiceProtocol {
     
-    static public func == (lhs: ParseResult, rhs: ParseResult) -> Bool {
-        switch (lhs, rhs) {
-        case (.failure, .failure):
-            return true
-            
-        case (.success(let issues1), .success(let issues2)):
-            return issues1 == issues2
-        default:
-            return false
-        }
-    }
-}
-
-public enum ParsingError: Error, Equatable {
-    case noFileFound
-    case parseProblem
-    case other(Error)
-    
-    static public func == (lhs: ParsingError, rhs: ParsingError) -> Bool {
-        switch (lhs, rhs) {
-        case (.noFileFound, .noFileFound),
-             (.other, .other):
-            return true
-        default:
-            return false
-        }
-    }
-}
-
-protocol ParseServiceProtocol {
+    /**
+     Function to parse CVS File
+     
+     - parameters:
+        - name: The name of desired CVS file
+        - completion: Closure, that returns the parsing result
+     
+     # Notes: #
+     Completion has two return types:
+     1. success. It contains Array of parsed items
+     2. failure. Contains type of error: 'ParsingError'
+     
+     # Example #
+     ```
+     let parsingService: ParsingServiceProtocol = ParsingService()
+     parsingService.parseCVSFile(with: "fileName") { result in
+         switch result {
+         case .success(let items):
+             print("items = \(items)")
+             
+         case .failure(let err):
+             print("error = \(err)")
+         }
+     }
+     ```
+     */
     func parseCVSFile(with name: String, completion: @escaping ParsingCompletion)
 }
 
-struct ParseService: ParseServiceProtocol {
+struct ParsingService: ParsingServiceProtocol {
     
     fileprivate struct Constants {
         static let comma: String = ","
@@ -55,7 +47,7 @@ struct ParseService: ParseServiceProtocol {
         static let quoteChar: Character = "\""
     }
     
-    func parseCVSFile(with name: String, completion: @escaping ParsingCompletion)  {
+    func parseCVSFile(with name: String, completion: @escaping ParsingCompletion) {
         let queue = DispatchQueue(label: "parse_file_queue", attributes: .concurrent)
         queue.async {
             self.parse(with: name) { result in

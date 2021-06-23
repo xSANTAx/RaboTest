@@ -8,15 +8,16 @@
 import UIKit
 
 protocol UserScreenFactoryProtocol {
-    func getMainPage(parseService: ParseServiceProtocol, completion: @escaping (UserFlowEvent) -> Void ) -> UIViewController
+    func getMainPage(parsingService: ParsingServiceProtocol, completion: @escaping (UserFlowEvent) -> Void ) -> UIViewController
     
     func getDetailPage(issueModel: IssueModel) -> UIViewController
 }
 
 final class UserScreenFactory: UserScreenFactoryProtocol {
-    func getMainPage(parseService: ParseServiceProtocol, completion: @escaping (UserFlowEvent) -> Void ) -> UIViewController {
+    
+    func getMainPage(parsingService: ParsingServiceProtocol, completion: @escaping (UserFlowEvent) -> Void ) -> UIViewController {
         let mainPageFactory: MainPageFactoryProtocol = MainPageFactory()
-        return mainPageFactory.make(parseService: parseService, completion: completion)
+        return mainPageFactory.make(parsingService: parsingService, completion: completion)
     }
     
     func getDetailPage(issueModel: IssueModel) -> UIViewController {

@@ -153,6 +153,7 @@ extension MainPageView {
 
 // MARK: - View Protocol
 extension MainPageView: MainPageViewProtocol {
+    
     func update(_ numberOfItems: Int) {
         self.numberOfItems = numberOfItems
         tableView.reloadData()
@@ -193,6 +194,7 @@ extension MainPageView: MainPageViewProtocol {
 
 // MARK: - Actions
 extension MainPageView {
+    
     @objc func pressed() {
         presenter.buttonParseTapped()
     }

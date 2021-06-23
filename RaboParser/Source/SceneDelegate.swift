@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -14,13 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
        
         if let windowScene = scene as? UIWindowScene {
-            
             window = UIWindow(windowScene: windowScene)
-            
             AppDelegate.shared.setupWindow(self.window!)
         }
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,7 +47,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-

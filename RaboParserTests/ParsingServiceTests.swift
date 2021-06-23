@@ -1,5 +1,5 @@
 //
-//  ParseServiceTests.swift
+//  ParsingServiceTests.swift
 //  RaboParserTests
 //
 //  Created by Andrei Ivanou2 on 6/22/21.
@@ -8,14 +8,14 @@
 import XCTest
 @testable import RaboParser
 
-class ParseServiceTests: XCTestCase {
+class ParsingServiceTests: XCTestCase {
     
     func testParsingWithWrongFileName() {
-        let parseService = ParseService()
+        let parsingService = ParsingService()
         var parseResult: ParseResult<[IssueModel]> = ParseResult.success([])
         
         let exp = expectation(description: "Parse CVS file is successful")
-        parseService.parseCVSFile(with: "test") { result in
+        parsingService.parseCVSFile(with: "test") { result in
             parseResult = result
             exp.fulfill()
         }
@@ -29,10 +29,10 @@ class ParseServiceTests: XCTestCase {
     }
     
     func testParsingMockFile() {
-        let parseService = ParseService()
+        let parsingService = ParsingService()
         var resultCount = 0
         let exp = expectation(description: "Parse CVS file is successful")
-        parseService.parseCVSFile(with: "issues_for_tests") { result in
+        parsingService.parseCVSFile(with: "issues_for_tests") { result in
             switch result {
             case .success(let issues):
                 resultCount = issues.count

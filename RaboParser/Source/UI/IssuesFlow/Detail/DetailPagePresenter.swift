@@ -12,6 +12,7 @@ protocol DetailPagePresenterProtocol {
 }
 
 class DetailPagePresenter: DetailPagePresenterProtocol {
+    
     weak var view: DetailPageViewProtocol?
     var issue: IssueModel
     

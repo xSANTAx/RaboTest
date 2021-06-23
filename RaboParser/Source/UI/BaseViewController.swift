@@ -15,11 +15,7 @@ class BaseViewController: UIViewController {
         view.backgroundColor = .white
     }
     
-    override var preferredStatusBarStyle : UIStatusBarStyle {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
-    }
-    
-    deinit {
-        print("\(self) deinit")
     }
 }

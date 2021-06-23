@@ -12,9 +12,9 @@ class MainPageTests: XCTestCase {
     
     func testPrtesenter() {
         
-        let parseService = ParseServiceMock()
+        let parsingService = ParsingServiceMock()
         
-        let presenter = MainPagePresenter(parseService: parseService, completion: nil)
+        let presenter = MainPagePresenter(parsingService: parsingService, completion: nil)
         let view = MainPageViewMock()
         presenter.view = view
         
@@ -26,7 +26,7 @@ class MainPageTests: XCTestCase {
     }
 }
 
-struct ParseServiceMock: ParseServiceProtocol {
+struct ParsingServiceMock: ParsingServiceProtocol {
     
     func parseCVSFile(with name: String, completion: @escaping ParsingCompletion) {
         let issue = IssueModel(name: "name", surname: "surname", dateOfBirth: Date(), issuesCount: 3)

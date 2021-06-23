@@ -105,13 +105,10 @@ extension DetailPageView {
 
 // MARK: - View Protocol
 extension DetailPageView: DetailPageViewProtocol {
+    
     func update(_ issue: IssueModel) {
         nameLabel.text = issue.name + " " + issue.surname
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM y"
-        
-        bodLabel.text = dateFormatter.string(from: issue.dateOfBirth)
+        bodLabel.text = issue.representDate()
         issuesCountLabel.text = "\(issue.issuesCount)"
     }
 }

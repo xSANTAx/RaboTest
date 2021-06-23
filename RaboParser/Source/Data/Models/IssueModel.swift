@@ -31,6 +31,12 @@ public struct IssueModel: Equatable {
         self.issuesCount = issuesCount
     }
     
+    func representDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM y"
+        return dateFormatter.string(from: self.dateOfBirth)
+    }
+    
     static public func == (lhs: IssueModel, rhs: IssueModel) -> Bool {
         lhs.name == rhs.name && lhs.surname == rhs.surname && lhs.dateOfBirth == rhs.dateOfBirth && lhs.issuesCount == rhs.issuesCount
     }

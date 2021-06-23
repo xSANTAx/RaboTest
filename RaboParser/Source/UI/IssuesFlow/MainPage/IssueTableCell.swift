@@ -57,8 +57,14 @@ final class IssueTableCell: UITableViewCell {
     
     fileprivate lazy var chevronImage: UIImageView = {
         let largeFont = UIFont.systemFont(ofSize: 13)
-        let configuration = UIImage.SymbolConfiguration(font: largeFont)
-        let imageView = UIImageView(image: UIImage(systemName: "chevron.right", withConfiguration: configuration))
+        var imageView = UIImageView()
+        if #available(iOS 13.0, *) {
+            let configuration = UIImage.SymbolConfiguration(font: largeFont)
+            imageView = UIImageView(image: UIImage(systemName: "chevron.right", withConfiguration: configuration))
+        } else {
+            imageView = UIImageView(image: UIImage(named: "front_arrow"))
+        }
+
         imageView.tintColor = .customBlack
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -118,13 +124,10 @@ fileprivate extension IssueTableCell {
 }
 
 extension IssueTableCell: IssueTableCellProtocol {
+    
     func update(for issue: IssueModel) {
         nameLabel.text = issue.name + " " + issue.surname
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM y"
-        
-        bodLabel.text = dateFormatter.string(from: issue.dateOfBirth)
+        bodLabel.text = issue.representDate()
         issuesCountLabel.text = "\(issue.issuesCount)"
     }
 }

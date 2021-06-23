@@ -8,16 +8,17 @@
 import UIKit
 
 protocol MainPageFactoryProtocol {
-    func make(parseService: ParseServiceProtocol, completion: @escaping (UserFlowEvent) -> Void ) -> UIViewController
+    func make(parsingService: ParsingServiceProtocol, completion: @escaping (UserFlowEvent) -> Void ) -> UIViewController
 }
 
 class MainPageFactory: MainPageFactoryProtocol {
-    func make(parseService: ParseServiceProtocol, completion: @escaping (UserFlowEvent) -> Void) -> UIViewController {
-        let presenter = MainPagePresenter(parseService: parseService, completion: completion)
+    
+    func make(parsingService: ParsingServiceProtocol, completion: @escaping (UserFlowEvent) -> Void) -> UIViewController {
+        let presenter = MainPagePresenter(parsingService: parsingService, completion: completion)
         let view = MainPageView(presenter: presenter)
-        
+
         presenter.view = view
-        
+ 
         return view
     }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD2BEEB8267CB89600858E03 /* RaboParserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEB7267CB89600858E03 /* RaboParserUITests.swift */; };
 		AD2BEED1267CB8CC00858E03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2BEEC7267CB8CB00858E03 /* LaunchScreen.storyboard */; };
 		AD2BEED3267CB8CC00858E03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEECB267CB8CB00858E03 /* AppDelegate.swift */; };
 		AD2BEED4267CB8CC00858E03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEECC267CB8CC00858E03 /* SceneDelegate.swift */; };
@@ -15,9 +14,8 @@
 		AD2BEED8267CBE3500858E03 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEED7267CBE3500858E03 /* MainPageView.swift */; };
 		AD2BEEDD267CBE8800858E03 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEDC267CBE8800858E03 /* BaseViewController.swift */; };
 		AD2BEEE0267CC00200858E03 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEDF267CC00200858E03 /* UIViewController+Extensions.swift */; };
-		AD2BEEE3267CC6A600858E03 /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEE2267CC6A600858E03 /* ParseService.swift */; };
+		AD2BEEE3267CC6A600858E03 /* ParsingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEE2267CC6A600858E03 /* ParsingService.swift */; };
 		AD2BEEE5267CC6C200858E03 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD2BEEE4267CC6C200858E03 /* issues.csv */; };
-		AD2BEEE7267D2C9800858E03 /* issues_check.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD2BEEE6267D2C9800858E03 /* issues_check.csv */; };
 		AD2BEEEB267F6E4B00858E03 /* UserFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEEA267F6E4B00858E03 /* UserFlowCoordinator.swift */; };
 		AD2BEEED267F6ED900858E03 /* MainPageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEEC267F6ED900858E03 /* MainPageFactory.swift */; };
 		AD2BEEEF267F6F5D00858E03 /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEEE267F6F5D00858E03 /* MainPagePresenter.swift */; };
@@ -30,21 +28,16 @@
 		AD2BEF002680CB4A00858E03 /* UserScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEEFF2680CB4A00858E03 /* UserScreenFactory.swift */; };
 		AD2BEF022680CE1E00858E03 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEF012680CE1E00858E03 /* UIColor+Extensions.swift */; };
 		AD2BEF0426811C8300858E03 /* UserScreenFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEF0326811C8300858E03 /* UserScreenFactoryTests.swift */; };
-		AD2BEF062681FBD800858E03 /* ParseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEF052681FBD800858E03 /* ParseServiceTests.swift */; };
+		AD2BEF062681FBD800858E03 /* ParsingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEF052681FBD800858E03 /* ParsingServiceTests.swift */; };
 		AD2BEF082682056000858E03 /* issues_for_tests.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD2BEF072682056000858E03 /* issues_for_tests.csv */; };
 		AD2BEF092682079800858E03 /* issues_for_tests.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD2BEF072682056000858E03 /* issues_for_tests.csv */; };
 		AD2BEF0B2682168600858E03 /* MainPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEF0A2682168600858E03 /* MainPageTests.swift */; };
+		ADF24BA7268350D30033ACE0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ADF24BA6268350D30033ACE0 /* .swiftlint.yml */; };
+		ADF24BAD26835D240033ACE0 /* ParsingCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF24BAC26835D240033ACE0 /* ParsingCompletion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		AD2BEEA9267CB89600858E03 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AD2BEE8A267CB89200858E03 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AD2BEE91267CB89200858E03;
-			remoteInfo = RaboParser;
-		};
-		AD2BEEB4267CB89600858E03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD2BEE8A267CB89200858E03 /* Project object */;
 			proxyType = 1;
@@ -57,9 +50,6 @@
 		AD2BEE92267CB89200858E03 /* RaboParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaboParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2BEEA8267CB89600858E03 /* RaboParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaboParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2BEEAE267CB89600858E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD2BEEB3267CB89600858E03 /* RaboParserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaboParserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD2BEEB7267CB89600858E03 /* RaboParserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaboParserUITests.swift; sourceTree = "<group>"; };
-		AD2BEEB9267CB89600858E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD2BEEC8267CB8CB00858E03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD2BEECB267CB8CB00858E03 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2BEECC267CB8CC00858E03 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,9 +58,8 @@
 		AD2BEED7267CBE3500858E03 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		AD2BEEDC267CBE8800858E03 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AD2BEEDF267CC00200858E03 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		AD2BEEE2267CC6A600858E03 /* ParseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
+		AD2BEEE2267CC6A600858E03 /* ParsingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingService.swift; sourceTree = "<group>"; };
 		AD2BEEE4267CC6C200858E03 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
-		AD2BEEE6267D2C9800858E03 /* issues_check.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues_check.csv; sourceTree = "<group>"; };
 		AD2BEEEA267F6E4B00858E03 /* UserFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFlowCoordinator.swift; sourceTree = "<group>"; };
 		AD2BEEEC267F6ED900858E03 /* MainPageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageFactory.swift; sourceTree = "<group>"; };
 		AD2BEEEE267F6F5D00858E03 /* MainPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresenter.swift; sourceTree = "<group>"; };
@@ -83,9 +72,11 @@
 		AD2BEEFF2680CB4A00858E03 /* UserScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScreenFactory.swift; sourceTree = "<group>"; };
 		AD2BEF012680CE1E00858E03 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		AD2BEF0326811C8300858E03 /* UserScreenFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScreenFactoryTests.swift; sourceTree = "<group>"; };
-		AD2BEF052681FBD800858E03 /* ParseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseServiceTests.swift; sourceTree = "<group>"; };
+		AD2BEF052681FBD800858E03 /* ParsingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingServiceTests.swift; sourceTree = "<group>"; };
 		AD2BEF072682056000858E03 /* issues_for_tests.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues_for_tests.csv; sourceTree = "<group>"; };
 		AD2BEF0A2682168600858E03 /* MainPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTests.swift; sourceTree = "<group>"; };
+		ADF24BA6268350D30033ACE0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		ADF24BAC26835D240033ACE0 /* ParsingCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCompletion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,22 +94,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD2BEEB0267CB89600858E03 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		AD2BEE89267CB89200858E03 = {
 			isa = PBXGroup;
 			children = (
+				ADF24BA6268350D30033ACE0 /* .swiftlint.yml */,
 				AD2BEE94267CB89200858E03 /* RaboParser */,
 				AD2BEEAB267CB89600858E03 /* RaboParserTests */,
-				AD2BEEB6267CB89600858E03 /* RaboParserUITests */,
 				AD2BEE93267CB89200858E03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,7 +112,6 @@
 			children = (
 				AD2BEE92267CB89200858E03 /* RaboParser.app */,
 				AD2BEEA8267CB89600858E03 /* RaboParserTests.xctest */,
-				AD2BEEB3267CB89600858E03 /* RaboParserUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,20 +130,11 @@
 			children = (
 				AD2BEF072682056000858E03 /* issues_for_tests.csv */,
 				AD2BEF0326811C8300858E03 /* UserScreenFactoryTests.swift */,
-				AD2BEF052681FBD800858E03 /* ParseServiceTests.swift */,
+				AD2BEF052681FBD800858E03 /* ParsingServiceTests.swift */,
 				AD2BEF0A2682168600858E03 /* MainPageTests.swift */,
 				AD2BEEAE267CB89600858E03 /* Info.plist */,
 			);
 			path = RaboParserTests;
-			sourceTree = "<group>";
-		};
-		AD2BEEB6267CB89600858E03 /* RaboParserUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AD2BEEB7267CB89600858E03 /* RaboParserUITests.swift */,
-				AD2BEEB9267CB89600858E03 /* Info.plist */,
-			);
-			path = RaboParserUITests;
 			sourceTree = "<group>";
 		};
 		AD2BEEC5267CB8CB00858E03 /* Source */ = {
@@ -180,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				AD2BEEE4267CC6C200858E03 /* issues.csv */,
-				AD2BEEE6267D2C9800858E03 /* issues_check.csv */,
 				AD2BEECE267CB8CC00858E03 /* Assets.xcassets */,
 				AD2BEECF267CB8CC00858E03 /* Info.plist */,
 			);
@@ -209,8 +182,8 @@
 		AD2BEEE1267CC69200858E03 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				AD2BEEE2267CC6A600858E03 /* ParseService.swift */,
-				AD2BEEF2267F787200858E03 /* IssueModel.swift */,
+				ADF24BAA26835CF10033ACE0 /* ParseService */,
+				ADF24BAB26835D070033ACE0 /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -247,6 +220,23 @@
 			path = IssuesFlow;
 			sourceTree = "<group>";
 		};
+		ADF24BAA26835CF10033ACE0 /* ParseService */ = {
+			isa = PBXGroup;
+			children = (
+				AD2BEEE2267CC6A600858E03 /* ParsingService.swift */,
+				ADF24BAC26835D240033ACE0 /* ParsingCompletion.swift */,
+			);
+			path = ParseService;
+			sourceTree = "<group>";
+		};
+		ADF24BAB26835D070033ACE0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD2BEEF2267F787200858E03 /* IssueModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,6 +247,7 @@
 				AD2BEE8E267CB89200858E03 /* Sources */,
 				AD2BEE8F267CB89200858E03 /* Frameworks */,
 				AD2BEE90267CB89200858E03 /* Resources */,
+				AD2BEF0C2682383D00858E03 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -285,24 +276,6 @@
 			productReference = AD2BEEA8267CB89600858E03 /* RaboParserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AD2BEEB2267CB89600858E03 /* RaboParserUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AD2BEEC2267CB89600858E03 /* Build configuration list for PBXNativeTarget "RaboParserUITests" */;
-			buildPhases = (
-				AD2BEEAF267CB89600858E03 /* Sources */,
-				AD2BEEB0267CB89600858E03 /* Frameworks */,
-				AD2BEEB1267CB89600858E03 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AD2BEEB5267CB89600858E03 /* PBXTargetDependency */,
-			);
-			name = RaboParserUITests;
-			productName = RaboParserUITests;
-			productReference = AD2BEEB3267CB89600858E03 /* RaboParserUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,10 +289,6 @@
 						CreatedOnToolsVersion = 12.5;
 					};
 					AD2BEEA7267CB89600858E03 = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = AD2BEE91267CB89200858E03;
-					};
-					AD2BEEB2267CB89600858E03 = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = AD2BEE91267CB89200858E03;
 					};
@@ -340,7 +309,6 @@
 			targets = (
 				AD2BEE91267CB89200858E03 /* RaboParser */,
 				AD2BEEA7267CB89600858E03 /* RaboParserTests */,
-				AD2BEEB2267CB89600858E03 /* RaboParserUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,9 +320,9 @@
 			files = (
 				AD2BEED1267CB8CC00858E03 /* LaunchScreen.storyboard in Resources */,
 				AD2BEED5267CB8CC00858E03 /* Assets.xcassets in Resources */,
+				ADF24BA7268350D30033ACE0 /* .swiftlint.yml in Resources */,
 				AD2BEEE5267CC6C200858E03 /* issues.csv in Resources */,
 				AD2BEF092682079800858E03 /* issues_for_tests.csv in Resources */,
-				AD2BEEE7267D2C9800858E03 /* issues_check.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,14 +334,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD2BEEB1267CB89600858E03 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AD2BEF0C2682383D00858E03 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD2BEE8E267CB89200858E03 /* Sources */ = {
@@ -396,7 +377,8 @@
 				AD2BEEF5267F835300858E03 /* IssueTableCell.swift in Sources */,
 				AD2BEED4267CB8CC00858E03 /* SceneDelegate.swift in Sources */,
 				AD2BEEF7267F842500858E03 /* Cell+Identifier.swift in Sources */,
-				AD2BEEE3267CC6A600858E03 /* ParseService.swift in Sources */,
+				ADF24BAD26835D240033ACE0 /* ParsingCompletion.swift in Sources */,
+				AD2BEEE3267CC6A600858E03 /* ParsingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,17 +386,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD2BEF062681FBD800858E03 /* ParseServiceTests.swift in Sources */,
+				AD2BEF062681FBD800858E03 /* ParsingServiceTests.swift in Sources */,
 				AD2BEF0426811C8300858E03 /* UserScreenFactoryTests.swift in Sources */,
 				AD2BEF0B2682168600858E03 /* MainPageTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD2BEEAF267CB89600858E03 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AD2BEEB8267CB89600858E03 /* RaboParserUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +399,6 @@
 			isa = PBXTargetDependency;
 			target = AD2BEE91267CB89200858E03 /* RaboParser */;
 			targetProxy = AD2BEEA9267CB89600858E03 /* PBXContainerItemProxy */;
-		};
-		AD2BEEB5267CB89600858E03 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AD2BEE91267CB89200858E03 /* RaboParser */;
-			targetProxy = AD2BEEB4267CB89600858E03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -496,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -551,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -566,15 +535,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RaboParser/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = aivanou.RaboParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -585,15 +556,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RaboParser/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = aivanou.RaboParser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -641,44 +614,6 @@
 			};
 			name = Release;
 		};
-		AD2BEEC3267CB89600858E03 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RaboParserUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = aivanou.RaboParserUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RaboParser;
-			};
-			name = Debug;
-		};
-		AD2BEEC4267CB89600858E03 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RaboParserUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = aivanou.RaboParserUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RaboParser;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -705,15 +640,6 @@
 			buildConfigurations = (
 				AD2BEEC0267CB89600858E03 /* Debug */,
 				AD2BEEC1267CB89600858E03 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AD2BEEC2267CB89600858E03 /* Build configuration list for PBXNativeTarget "RaboParserUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AD2BEEC3267CB89600858E03 /* Debug */,
-				AD2BEEC4267CB89600858E03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
