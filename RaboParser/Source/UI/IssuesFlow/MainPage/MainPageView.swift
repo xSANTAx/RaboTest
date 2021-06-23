@@ -105,7 +105,6 @@ final class MainPageView: BaseViewController {
     
     func setupUI() {
         title = "Issues"
-        navigationController?.navigationBar.prefersLargeTitles = true
         
         view.addSubview(infoLabel)
         view.addSubview(tableView)

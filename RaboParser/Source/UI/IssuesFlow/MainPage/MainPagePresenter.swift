@@ -60,7 +60,6 @@ class MainPagePresenter: MainPagePresenterProtocol {
     }
     
     func configureCell(cell: IssueTableCellProtocol, for indexPath: IndexPath) -> Bool {
-        
         let issue = issues[indexPath.row]
         cell.update(for: issue)
         

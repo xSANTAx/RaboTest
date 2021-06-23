@@ -8,6 +8,7 @@
 import Foundation
 
 public struct IssueModel: Equatable {
+    
     let name: String
     let surname: String
     let dateOfBirth: Date
